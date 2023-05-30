@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- stylesheet Link  -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Font global Link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- js file Link  -->
+  <script defer src="./js/main.js"></script>
+
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+
+<body>
+  <div class="overlay" id="overlay-zoom"></div>
+  <header id="header">
+    <div class="overlay" id="overlay"></div>
+    <div class="container">
+      <div class="l-m">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="borger" id="borger-btn">
+          <span></span>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li> <a href="#">Men</a></li>
+            <li> <a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="c-p">
+        <div class="cart-container">
+          <span id="notif"></span>
+          <button id="cart-btn"><img src="/images/icon-cart.svg" alt=""></button>
+          <div class="cart" id="cart">
+            <div class="header">
+              <p>Cart</p>
+            </div>
+            <div class="cart-contnet">
+              <p id="no__product">Your cart is empty.</p>
+              <div class="product__cart" id="product__cart">
+                <div class="product__info">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                  <p>Fall Limited Edition Sneakers <span id="product__number"> <span id="full__price"></span></span></p>
+                  <img id="delete-btn" src="./images/icon-delete.svg" alt="">
+                </div>
+                  <button class="check__btn">Checkout</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="./images/image-avatar.png" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="products">
+        <div class="product-container">
+          <div class="wrapper" id="zoom__in">
+            <div class="full-image">
+              <img id="prev" src="./images/icon-previous.svg" alt="">
+              <img id="next" src="./images/icon-next.svg" alt="">
+              <img src="./images/image-product-1.jpg" class="slide" alt="">
+              <img src="./images/image-product-2.jpg" class="slide" alt="">
+              <img src="./images/image-product-3.jpg" class="slide" alt="">
+              <img src="./images/image-product-4.jpg" class="slide" alt="">
+            </div>
+          </div>
+          <div class="images">
+            <div data-num="0" class="product active">
+              <img class="thumbnail__img" src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="1" class="product">
+              <img class="thumbnail__img" src="./images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="2" class="product">
+              <img class="thumbnail__img" src="./images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="3" class="product">
+              <img class="thumbnail__img" src="./images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <span>Sneaker Company</span>
+        <h1>Fall Limited Edition <br> Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price">
+          <div class="p-p">
+            <h2 id="price">$125.00</h2>
+            <span>50%</span>
+          </div>
+          <p>$250.00</p>
+        </div>
+        <div class="num-btn">
+          <div class="number">
+            <button class="plus-minus" id="minus"><img src="./images/icon-minus.svg" alt=""></button>
+            <span id="op">0</span>
+            <button class="plus-minus" id="plus"><img src="./images/icon-plus.svg" alt=""></button>
+          </div>
+          <div class="btn">
+            <button id="addtocart__btn"><img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="image-zoom" id="zoom__in__images">
+      <div class="close" id="close-zoom">
+        <img src="./images/icon-close.svg" alt="">
+      </div>
+      <div class="products">
+        <div class="product-container">
+          <div class="wrapper2">
+          <img id="prev-zoom" src="./images/icon-previous.svg" alt="">
+          <img id="next-zoom" src="./images/icon-next.svg" alt="">
+            <div class="full-image">
+              <img src="./images/image-product-1.jpg" class="slide-zoom" alt="">
+              <img src="./images/image-product-2.jpg" class="slide-zoom" alt="">
+              <img src="./images/image-product-3.jpg" class="slide-zoom" alt="">
+              <img src="./images/image-product-4.jpg" class="slide-zoom" alt="">
+            </div>
+          </div>
+          <div class="images">
+            <div data-num="0" class="product active">
+              <img class="thumbnail__img" src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="1" class="product">
+              <img class="thumbnail__img" src="./images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="2" class="product">
+              <img class="thumbnail__img" src="./images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div data-num="3" class="product">
+              <img class="thumbnail__img" src="./images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  
+
+
+</body>
+
+</html>

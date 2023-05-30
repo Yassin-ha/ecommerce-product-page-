@@ -1,0 +1,106 @@
+
+$orange-color: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-graish-blue: hsl(219, 9%, 45%);
+$graish-blue: hsl(220, 14%, 75%);
+$light-graish: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+
+// cconfig container media 
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/* medium */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+/* large */
+@media screen and (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* X large */
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* XX large  */
+@media screen and (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+// all mixin 
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transitionEase {
+    transition: all .3s ease-in-out;
+}
+@mixin hoverBtn {
+    opacity: .5;
+}
+@mixin imageActive {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: (255 255 255 / 50%);
+}
+
+// mixin for media 
+@mixin media-xsm-sm {
+    @media screen and (max-width: 767px)  {
+        @content;
+    }
+}
+@mixin media-xsm {
+    @media screen and (max-width: 575px)  {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media (min-width: 576px) and (max-width: 767px)  {
+        @content;
+    }
+}
+@mixin media-md {
+    @media (min-width: 768px) and (max-width: 991px)  {
+        @content;
+    }
+}
+@mixin media-la {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
